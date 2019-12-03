@@ -1,0 +1,29 @@
+sc_node_not_relation ->  concept_parmeliaceae;;
+concept_parmeliaceae => nrel_main_idtf:
+[пармелиевые](*<-lang_ru;;*);
+[parmeliaceae](*<-lang_en;;*);;
+
+//
+concept_parmeliaceae <- rrel_key_sc_element:
+	...
+	(*
+	<- definition;;
+	=> nrel_main_idtf: [Опр.(пармелиевые)]  (* <- lang_ru;; *);;
+	<= nrel_sc_text_translation:
+	...
+	(*
+	-> rrel_example:
+			[семейство порядка леканоральные](* <- lang_ru;; 	*);;
+	*);;
+	<= nrel_using_constants:
+	...
+	(*
+	-> concept_lekanoralnye;;
+	*);;	
+*);;
+
+//
+concept_parmeliaceae => nrel_inclusion:
+    concept_girotrahina_reflexis;
+    concept_melaneliya_oredioznaya;
+    concept_ramalina_dlinnovolosataya;;

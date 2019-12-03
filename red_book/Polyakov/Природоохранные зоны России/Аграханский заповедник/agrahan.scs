@@ -1,0 +1,90 @@
+
+sc_node_not_relation -> agrahan;;
+concept_territorry->agrahan;;
+agrahan => nrel_main_idtf: [заказник Аграханский] (* <- lang_ru;; *);
+				     [Agrahanckiy] (* <- lang_en;; *);;
+
+
+agrahan <-rrel_key_sc_element:...
+(*
+	<-illustration;;
+	=>nrel_main_idtf:
+		[Рис. (заказник Аграханский)](*<-lang_ru;;*);
+		[Pic. (Agrahanckiy)](*<-lang_en;;*);;
+	<=nrel_sc_text_translation:...
+	(*
+		->"file://agrakhan.jpg"(*=>nrel_format:format_jpg;;*);;
+	*);;
+*);;
+
+
+agrahan<-concept_sanctuary;;
+
+agrahan <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Утв.(заказник Аграханский, год основания*)] (* <- lang_ru;; *);;
+	<- statement;;
+	->rrel_key_sc_element:nrel_create_year;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Биологический заказник Аграханский был создан в 1983 году.]
+				(* 
+				<- lang_ru;;
+				<- rrel_example:...
+					(*
+					<= nrel_sc_text_translation:
+						[*
+							agrahan=>nrel_create_year:
+							...
+							(*<-rrel_number_of_year:1983(*<-concept_number;;*);; *);;
+						*];;
+					*);;
+				*);;
+		*);;
+	*);;
+
+agrahan <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Утв.(заказник Аграханский, площадь*)] (* <- lang_ru;; *);;
+	<- statement;;
+	->rrel_key_sc_element:nrel_square;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[Площадь Аграханского заказника составляет 39 га.]
+				(* 
+				<- lang_ru;;
+				<- rrel_example:...
+					(*
+					<= nrel_sc_text_translation:
+						[*
+							agrahan=>nrel_square:[39 га](*
+							<-value;;
+							<=nrel_measurement:...(*
+								->rrel_ga:39(*<-concept_number;;*);;
+								*);;
+							*);;
+						*];;
+					*);;
+				*);;
+		*);;
+	*);;
+
+agrahan => nrel_area_location: Kizlyar_area; Kirov_area;;
+agrahan => nrel_flora: ...(*
+<-Oxycoccus;;
+*);;
+Kizlyar_area => nrel_main_idtf: [Кизлярский район] (* <- lang_ru;; *);;
+Kirov_area => nrel_main_idtf: [Кировский район] (* <- lang_ru;; *);;
+
+sc_node_role_relation->rrel_ga;;
+rrel_ga => nrel_main_idtf:
+[га'](*<-lang_ru;;*);
+	[ga'](*<-lang_en;;*);;
+
+subject_domain_of_protected_areas_rus -> rrel_not_maximum_studied_object_class: agrahan;;
